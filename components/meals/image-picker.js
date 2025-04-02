@@ -31,7 +31,7 @@ export default function MealImageUpload({label,name}){
                 {!pickedImage && <p>No image picked yet.</p>}
                 {pickedImage && <Image src={pickedImage} alt="Image selected by user" fill />}
             </div>
-            <input type='file' multiple onChange={handleImageChange} className={classes.input} ref={inputRef} id={name} accept='image/png, image/jpeg' name={name} />
+            <input type='file' required multiple onChange={handleImageChange} className={classes.input} ref={inputRef} id={name} accept='image/png, image/jpeg' name={name} />
             <button className={classes.button} type='button' onClick={handleClick}>Pick an Image</button>
         </div>
     </div>
